@@ -1,0 +1,15 @@
+<package>
+  <description> Launch files for the navigation stack for the REEM upper body, which allows collision free motion planning
+  </description>
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reem_3dnav</url>
+
+  <depend package="reem_arm_navigation_perception"/>
+  <depend package="reem_arm_navigation_filtering"/>
+  <depend package="reem_arm_navigation_actions"/>
+  <depend package="reem_arm_navigation_planning"/>
+</package>
+
+

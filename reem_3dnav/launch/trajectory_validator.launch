@@ -1,0 +1,6 @@
+<launch>
+
+  <!-- Arm navigation -->
+  <include file="$(find reem_3dnav)/launch/upper_body_navigation.launch"/>
+
+</launch>

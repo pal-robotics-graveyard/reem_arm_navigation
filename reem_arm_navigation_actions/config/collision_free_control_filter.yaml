@@ -1,0 +1,4 @@
+service_type: FilterJointTrajectory
+filter_chain:
+  - name: cubic_spline_velocity_scaler
+    type: CubicSplineVelocityScalerFilterJointTrajectory

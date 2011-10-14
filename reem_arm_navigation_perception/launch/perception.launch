@@ -1,0 +1,7 @@
+<launch>
+  <!-- send additional description parameters -->
+  <include file="$(find reem_arm_navigation_config)/launch/reem_planning_environment.launch" />
+
+  <!-- start collision map -->
+  <include file="$(find reem_arm_navigation_perception)/launch/collision_map_self_occ.launch" />
+</launch>

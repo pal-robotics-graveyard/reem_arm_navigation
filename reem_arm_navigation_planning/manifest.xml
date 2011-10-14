@@ -1,0 +1,9 @@
+<package>
+  <description brief="REEM upper-body motion planners setup"></description>
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/http://ros.org/wiki/reem_arm_navigation_planning</url>
+
+  <depend package="ompl_ros_interface"/>
+</package>
