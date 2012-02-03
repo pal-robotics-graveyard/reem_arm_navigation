@@ -1,8 +1,0 @@
-<package>
-  <description brief="REEM arm navigation configuration files.">
-  </description>
-  <author>Adolfo Rodriguez Tsouroukdissian</author>
-  <license>Modified BSD</license>
-  <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/reem_arm_navigation_config</url>
-</package>

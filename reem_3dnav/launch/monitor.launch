@@ -1,7 +1,0 @@
-<launch>
-  <!-- Rxconsole -->
-  <node name="Rxconsole" pkg="rxtools" type="rxconsole" />
-
-  <!-- Rviz -->
-  <node name="Rviz" pkg="rviz" type="rviz" />
-</launch>

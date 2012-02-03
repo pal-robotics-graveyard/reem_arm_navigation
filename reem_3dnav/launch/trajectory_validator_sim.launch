@@ -1,9 +1,0 @@
-<launch>
-
-  <!-- Basic Reem setup -->
-  <include file="$(find reem_bringup)/launch/reem.launch" />
-
-  <!-- Regular trajectory validator launch file -->
-  <include file="$(find reem_3dnav)/launch/trajectory_validator.launch" />
-
-</launch>
