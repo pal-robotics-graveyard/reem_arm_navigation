@@ -1,0 +1,40 @@
+<launch>
+  <!-- send additional description parameters -->
+  <include file="$(find reem_arm_navigation)/launch/reem_planning_environment.launch" />
+
+  <!-- self filter stereo points -->
+  <node pkg="robot_self_filter" type="self_filter" respawn="true" name="stereo_self_filter" output="screen">
+     <remap from="cloud_in" to="/stereo/near_stereo_obstacles/obstacles" />
+     <remap from="cloud_out" to="/stereo/near_stereo_obstacles/obstacles_filtered" />
+
+     <param name="subsample_value" type="double" value=".02"/>
+     <rosparam command="load" file="$(find reem_arm_navigation)/config/self_filter.yaml" />
+  </node>
+
+  <!-- attached_object filter stereo points -->
+  <node pkg="planning_environment" type="filter_attached_objects" name="filter_attached_objects_stereo" output="screen">
+    <remap from="cloud_in" to="/stereo/near_stereo_obstacles/obstacles_filtered" />
+    <remap from="cloud_out" to="/stereo/near_stereo_obstacles/obstacles_filtered_attached" />
+    <param name="sensor_frame" type="string" value="stereo_optical_frame" />
+  </node>
+
+  <node pkg="collider" type="collider_node" name="collider_node" respawn="true" output="screen">
+     <param name="fixed_frame" type="string" value="base_link" />
+     <param name="resolution" type="double" value="0.025" />
+     <param name="max_range" type="double" value="2.5" />
+     <param name="publish_static_over_dynamic_map" value="true" />
+     <param name="sensor_model_hit" value= "0.8" />
+     <param name="sensor_model_miss" value= "0.31" />
+     <param name="sensor_model_min" value= "0.12" />
+     <param name="sensor_model_max" value= "0.95" />
+
+     <remap from="collision_map_out" to="collision_map_occ" />
+     <remap from="point_cloud_out" to="octomap_point_cloud" />
+
+     <rosparam command="load" file="$(find reem_arm_navigation)/config/collision_map_sources_laser+stereo.yaml"/>
+
+     <!-- self filtering links -->
+     <rosparam command="load" file="$(find reem_arm_navigation)/config/self_filter.yaml" />
+
+  </node>
+</launch>

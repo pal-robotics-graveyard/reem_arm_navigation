@@ -1,0 +1,13 @@
+cloud_sources:
+  - name: /stereo/near_stereo_obstacles/obstacles_filtered
+    raw_name: /stereo/near_stereo_obstacles/obstacles
+    frame_subsample: 1
+    point_subsample: 1
+    sensor_frame: stereo_optical_frame
+  - name: /extruded_base_laser
+    frame_subsample: 1
+    point_subsample: 1
+    sensor_frame: base_footprint
+
+camera_info_topic: /stereo/left/camera_info
+
