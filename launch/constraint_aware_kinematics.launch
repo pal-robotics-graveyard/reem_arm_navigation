@@ -2,13 +2,13 @@
     <include file="$(find reem_arm_navigation)/launch/reem_planning_environment.launch" />
     <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="reem_left_arm_kinematics">
         <param name="group" type="string" value="left_arm" />
-        <param name="left_arm/root_name" type="string" value="arm_left_1_link" />
+        <param name="left_arm/root_name" type="string" value="torso_2_link" />
         <param name="left_arm/tip_name" type="string" value="arm_left_7_link" />
         <param name="kinematics_solver" type="string" value="arm_kinematics_constraint_aware/KDLArmKinematicsPlugin" />
     </node>
     <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="reem_right_arm_kinematics">
         <param name="group" type="string" value="right_arm" />
-        <param name="right_arm/root_name" type="string" value="arm_right_1_link" />
+        <param name="right_arm/root_name" type="string" value="torso_2_link" />
         <param name="right_arm/tip_name" type="string" value="arm_right_7_link" />
         <param name="kinematics_solver" type="string" value="arm_kinematics_constraint_aware/KDLArmKinematicsPlugin" />
     </node>
