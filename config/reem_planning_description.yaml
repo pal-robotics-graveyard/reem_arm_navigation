@@ -4,14 +4,6 @@ multi_dof_joints:
     parent_frame_id: base_footprint
     child_frame_id: base_footprint
 groups:
-  ## Added manually
-  - name: robot_body
-    links:
-      base_link
-      torso_1_link
-      torso_2_link
-      head_1_link
-      head_2_link
   - name: both_arms
     joints:
       - arm_left_1_joint
