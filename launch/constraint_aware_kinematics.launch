@@ -12,4 +12,10 @@
         <param name="right_arm/tip_name" type="string" value="arm_right_7_link" />
         <param name="kinematics_solver" type="string" value="arm_kinematics_constraint_aware/KDLArmKinematicsPlugin" />
     </node>
+    <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="reem_right_arm_torso_kinematics" >
+        <param name="group" type="string" value="right_arm_torso" />
+        <param name="right_arm_torso/root_name" type="string" value="base_link" />
+        <param name="right_arm_torso/tip_name" type="string" value="arm_right_7_link" />
+        <param name="kinematics_solver" type="string" value="reem_kinematics_constraint_aware/ReemKinematicsPlugin" />
+    </node>
 </launch>

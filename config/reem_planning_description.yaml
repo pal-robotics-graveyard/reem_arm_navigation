@@ -26,6 +26,9 @@ groups:
   - name: right_arm
     base_link: torso_2_link
     tip_link: arm_right_7_link
+  - name: right_arm_torso
+    base_link: base_link
+    tip_link: arm_right_7_link
   - name: upper_body
     joints:
       - arm_left_1_joint
