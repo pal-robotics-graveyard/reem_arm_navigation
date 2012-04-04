@@ -1,3 +1,4 @@
+# Used by ompl and trajectory filter
 default_robot_padding: 0.02
 link_padding:
   - link: base_link
