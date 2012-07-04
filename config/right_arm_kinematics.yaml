@@ -22,11 +22,11 @@ right_arm:
 
   # Default posture to use as secondary task
   default_posture:
-    arm_right_1_joint:  0.138
-    arm_right_2_joint:  0.148
-    arm_right_3_joint:  0.342
-    arm_right_4_joint:  1.610
-    arm_right_5_joint:  1.106
-    arm_right_6_joint: -0.108
-    arm_right_7_joint: -0.914
+    arm_right_1_joint: -0.4
+    arm_right_2_joint:  0.6
+    arm_right_3_joint: -0.1
+    arm_right_4_joint:  0.6109
+    arm_right_5_joint:  0.2
+    arm_right_6_joint:  0.4
+    arm_right_7_joint:  0.2
 
