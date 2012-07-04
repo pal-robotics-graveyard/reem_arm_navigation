@@ -5,7 +5,7 @@ right_arm_torso:
   root_name:             base_link
   tip_name:              arm_right_7_link
   max_solver_iterations: 2000
-  epsilon:               0.01  # Delta x considered to be near-zero
+  epsilon:               0.00001  # Delta x considered to be near-zero
   max_delta_x:           0.006 # 0.6   m/s x 0.01s
   max_delta_q:           0.03  # 3.0 rad/s x 0.01s
   velik_gain:            1.0
@@ -24,12 +24,12 @@ right_arm_torso:
 
   # Default posture to use as secondary task
   default_posture:
-    torso_1_joint:      0.257
-    torso_2_joint:      0.146
-    arm_right_1_joint:  0.138
-    arm_right_2_joint:  0.148
-    arm_right_3_joint:  0.342
-    arm_right_4_joint:  1.610
-    arm_right_5_joint:  1.106
-    arm_right_6_joint: -0.108
-    arm_right_7_joint: -0.914
+    torso_1_joint:      0.0
+    torso_2_joint:      0.0
+    arm_right_1_joint: -0.4
+    arm_right_2_joint:  0.6
+    arm_right_3_joint: -0.1
+    arm_right_4_joint:  0.6109
+    arm_right_5_joint:  0.2
+    arm_right_6_joint:  0.4
+    arm_right_7_joint:  0.2
