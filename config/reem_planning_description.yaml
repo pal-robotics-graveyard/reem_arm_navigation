@@ -48,41 +48,86 @@ groups:
       - torso_2_joint
       - torso_1_joint
 default_collision_operations:
-  - object1: base_bumper_01_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_02_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_03_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_04_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_05_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_06_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_07_link
-    object2: base_link
-    operation: disable  # Manually added
-  - object1: base_bumper_07_link
-    object2: wheel_right_link
-    operation: disable  # Manually added
-  - object1: base_bumper_03_link
-    object2: wheel_left_link
-    operation: disable  # Manually added
-  - object1: base_cargo_link
-    object2: base_link
-    operation: disable  # Adjacent in collision
   - object1: base_footprint
     object2: base_link
     operation: disable  # Adjacent in collision
   - object1: base_link
+    object2: base_bumper_01_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_bumper_02_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_bumper_03_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_bumper_04_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_bumper_05_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_bumper_06_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_bumper_07_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_cargo_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_ir_01_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_ir_02_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_ir_03_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
     object2: base_laser_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_04_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_05_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_06_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_07_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_08_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_09_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_10_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_11_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_12_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_13_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_14_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_15_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_18_link
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: base_sonar_19_link
     operation: disable  # Adjacent in collision
   - object1: base_link
     object2: base_torso_laser_link
@@ -120,6 +165,9 @@ default_collision_operations:
   - object1: arm_left_3_link
     object2: arm_left_4_link
     operation: disable  # Adjacent in collision
+  - object1: arm_left_4_link
+    object2: arm_left_5_link
+    operation: disable  # Adjacent in collision
   - object1: arm_left_5_link
     object2: arm_left_6_link
     operation: disable  # Adjacent in collision
@@ -127,7 +175,31 @@ default_collision_operations:
     object2: arm_left_7_link
     operation: disable  # Adjacent in collision
   - object1: arm_left_7_link
-    object2: hand_left_link
+    object2: arm_left_tool_link
+    operation: disable  # Adjacent in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_palm_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_palm_link
+    object2: hand_left_index_1_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_index_1_link
+    object2: hand_left_index_2_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_index_2_link
+    object2: hand_left_index_3_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_palm_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_middle_1_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_middle_2_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_left_palm_link
+    object2: hand_left_thumb_link
     operation: disable  # Adjacent in collision
   - object1: torso_2_link
     object2: arm_right_1_link
@@ -151,13 +223,40 @@ default_collision_operations:
     object2: arm_right_7_link
     operation: disable  # Adjacent in collision
   - object1: arm_right_7_link
-    object2: hand_right_link
+    object2: arm_right_tool_link
+    operation: disable  # Adjacent in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_palm_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_palm_link
+    object2: hand_right_index_1_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_index_1_link
+    object2: hand_right_index_2_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_index_2_link
+    object2: hand_right_index_3_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_palm_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_middle_1_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_middle_2_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Adjacent in collision
+  - object1: hand_right_palm_link
+    object2: hand_right_thumb_link
     operation: disable  # Adjacent in collision
   - object1: torso_2_link
     object2: head_1_link
     operation: disable  # Adjacent in collision
   - object1: head_1_link
     object2: head_2_link
+    operation: disable  # Adjacent in collision
+  - object1: head_2_link
+    object2: head_sonar_20_link
     operation: disable  # Adjacent in collision
   - object1: head_2_link
     object2: stereo_link
@@ -183,14 +282,14 @@ default_collision_operations:
   - object1: base_link
     object2: wheel_right_link
     operation: disable  # Adjacent in collision
-  - object1: arm_left_4_link
-    object2: arm_left_5_link
-    operation: disable  # Adjacent in collision
   - object1: arm_left_2_link
     object2: torso_2_link
     operation: disable  # Always in collision
   - object1: arm_left_5_link
     object2: arm_left_7_link
+    operation: disable  # Always in collision
+  - object1: arm_left_7_link
+    object2: hand_left_palm_link
     operation: disable  # Always in collision
   - object1: arm_right_2_link
     object2: torso_2_link
@@ -198,6 +297,375 @@ default_collision_operations:
   - object1: arm_right_5_link
     object2: arm_right_7_link
     operation: disable  # Always in collision
+  - object1: torso_2_link
+    object2: head_2_link
+    operation: disable  # Default in collision
+  - object1: arm_left_4_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_5_link
+    object2: arm_right_tool_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_5_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_5_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_5_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_5_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_6_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_6_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_6_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_7_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_7_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_7_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_7_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_4_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_5_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: base_cargo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: base_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_index_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_index_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_palm_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_thumb_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: head_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: head_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: torso_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_left_tool_link
+    object2: torso_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_5_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_5_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_5_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_5_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_6_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_6_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_6_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_6_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_7_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_7_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_7_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_7_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: base_cargo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: base_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: base_torso_laser_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_index_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_index_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_index_3_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_palm_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_thumb_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: head_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: head_2_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: torso_1_link
+    operation: disable  # Occasionally in collision
+  - object1: arm_right_tool_link
+    object2: torso_2_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_index_1_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_index_2_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_index_3_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_palm_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_left_thumb_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_index_1_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_index_2_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_index_3_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_palm_link
+    operation: disable  # Occasionally in collision
+  - object1: base_torso_laser_link
+    object2: hand_right_thumb_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_1_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_1_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_1_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_2_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_2_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_2_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_3_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_3_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_index_3_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_1_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_1_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_1_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_2_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_2_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_2_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_3_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_3_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_middle_3_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_palm_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_palm_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_palm_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_thumb_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_thumb_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_left_thumb_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_1_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_1_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_1_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_2_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_2_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_2_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_3_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_index_3_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_1_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_1_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_1_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_2_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_2_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_2_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_3_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_3_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_middle_3_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_palm_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_palm_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_palm_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_thumb_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_thumb_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Occasionally in collision
+  - object1: hand_right_thumb_link
+    object2: stereo_link
+    operation: disable  # Occasionally in collision
   - object1: arm_left_1_link
     object2: arm_left_3_link
     operation: disable  # Never in collision
@@ -214,6 +682,9 @@ default_collision_operations:
     object2: arm_left_7_link
     operation: disable  # Never in collision
   - object1: arm_left_1_link
+    object2: arm_left_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
     object2: arm_right_1_link
     operation: disable  # Never in collision
   - object1: arm_left_1_link
@@ -233,6 +704,33 @@ default_collision_operations:
     operation: disable  # Never in collision
   - object1: arm_left_1_link
     object2: arm_right_7_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_left_1_link
+    object2: base_cargo_link
     operation: disable  # Never in collision
   - object1: arm_left_1_link
     object2: base_footprint
@@ -257,9 +755,6 @@ default_collision_operations:
     operation: disable  # Never in collision
   - object1: arm_left_1_link
     object2: caster_right_2_link
-    operation: disable  # Never in collision
-  - object1: arm_left_1_link
-    object2: hand_left_link
     operation: disable  # Never in collision
   - object1: arm_left_1_link
     object2: head_1_link
@@ -301,6 +796,9 @@ default_collision_operations:
     object2: arm_left_7_link
     operation: disable  # Never in collision
   - object1: arm_left_2_link
+    object2: arm_left_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
     object2: arm_right_1_link
     operation: disable  # Never in collision
   - object1: arm_left_2_link
@@ -320,6 +818,33 @@ default_collision_operations:
     operation: disable  # Never in collision
   - object1: arm_left_2_link
     object2: arm_right_7_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: base_cargo_link
     operation: disable  # Never in collision
   - object1: arm_left_2_link
     object2: base_footprint
@@ -346,7 +871,10 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_2_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_2_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: arm_left_2_link
     object2: head_1_link
@@ -385,6 +913,9 @@ default_collision_operations:
     object2: arm_left_7_link
     operation: disable  # Never in collision
   - object1: arm_left_3_link
+    object2: arm_left_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
     object2: arm_right_1_link
     operation: disable  # Never in collision
   - object1: arm_left_3_link
@@ -395,6 +926,42 @@ default_collision_operations:
     operation: disable  # Never in collision
   - object1: arm_left_3_link
     object2: arm_right_4_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: arm_right_5_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: arm_right_6_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: arm_right_7_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: base_cargo_link
     operation: disable  # Never in collision
   - object1: arm_left_3_link
     object2: base_footprint
@@ -421,13 +988,40 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_3_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: hand_left_thumb_link
     operation: disable  # Never in collision
   - object1: arm_left_3_link
     object2: head_1_link
     operation: disable  # Never in collision
   - object1: arm_left_3_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
     object2: imu_link
+    operation: disable  # Never in collision
+  - object1: arm_left_3_link
+    object2: stereo_gazebo_l_stereo_camera_frame
     operation: disable  # Never in collision
   - object1: arm_left_3_link
     object2: stereo_gazebo_r_stereo_camera_frame
@@ -448,6 +1042,9 @@ default_collision_operations:
     object2: arm_left_7_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
+    object2: arm_left_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
     object2: arm_right_1_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
@@ -460,6 +1057,42 @@ default_collision_operations:
     object2: arm_right_4_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
+    object2: arm_right_5_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: arm_right_6_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: arm_right_7_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
     object2: base_footprint
     operation: disable  # Never in collision
   - object1: arm_left_4_link
@@ -484,7 +1117,28 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: hand_left_thumb_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
     object2: head_1_link
@@ -493,16 +1147,52 @@ default_collision_operations:
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: arm_left_4_link
     object2: wheel_left_link
     operation: disable  # Never in collision
   - object1: arm_left_4_link
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: arm_left_5_link
+    object2: arm_left_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
     object2: arm_right_1_link
     operation: disable  # Never in collision
   - object1: arm_left_5_link
     object2: arm_right_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: arm_right_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: arm_right_4_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: base_bumper_07_link
     operation: disable  # Never in collision
   - object1: arm_left_5_link
     object2: base_footprint
@@ -523,6 +1213,24 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_5_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_5_link
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_left_5_link
@@ -532,10 +1240,19 @@ default_collision_operations:
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
+    object2: arm_left_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
     object2: arm_right_1_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
     object2: arm_right_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: arm_right_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: arm_right_4_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
     object2: arm_right_6_link
@@ -544,6 +1261,30 @@ default_collision_operations:
     object2: arm_right_7_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
     object2: base_footprint
     operation: disable  # Never in collision
   - object1: arm_left_6_link
@@ -562,16 +1303,31 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
-    object2: head_1_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_left_6_link
+    object2: hand_left_thumb_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
     object2: imu_link
-    operation: disable  # Never in collision
-  - object1: arm_left_6_link
-    object2: torso_1_link
     operation: disable  # Never in collision
   - object1: arm_left_6_link
     object2: wheel_left_link
@@ -586,10 +1342,40 @@ default_collision_operations:
     object2: arm_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
+    object2: arm_right_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: arm_right_4_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
     object2: arm_right_6_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
     object2: arm_right_7_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: base_bumper_07_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
     object2: base_footprint
@@ -610,18 +1396,129 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
-    object2: head_1_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_7_link
+    object2: hand_left_thumb_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
-    object2: torso_1_link
-    operation: disable  # Never in collision
-  - object1: arm_left_7_link
     object2: wheel_left_link
     operation: disable  # Never in collision
   - object1: arm_left_7_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_6_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_7_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: arm_left_tool_link
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: arm_right_1_link
@@ -640,6 +1537,33 @@ default_collision_operations:
     object2: arm_right_7_link
     operation: disable  # Never in collision
   - object1: arm_right_1_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: arm_right_1_link
     object2: base_footprint
     operation: disable  # Never in collision
   - object1: arm_right_1_link
@@ -662,9 +1586,6 @@ default_collision_operations:
     operation: disable  # Never in collision
   - object1: arm_right_1_link
     object2: caster_right_2_link
-    operation: disable  # Never in collision
-  - object1: arm_right_1_link
-    object2: hand_right_link
     operation: disable  # Never in collision
   - object1: arm_right_1_link
     object2: head_1_link
@@ -706,6 +1627,33 @@ default_collision_operations:
     object2: arm_right_7_link
     operation: disable  # Never in collision
   - object1: arm_right_2_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: arm_right_2_link
     object2: base_footprint
     operation: disable  # Never in collision
   - object1: arm_right_2_link
@@ -730,7 +1678,7 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_right_2_link
-    object2: hand_right_link
+    object2: hand_right_middle_1_link
     operation: disable  # Never in collision
   - object1: arm_right_2_link
     object2: head_1_link
@@ -769,6 +1717,33 @@ default_collision_operations:
     object2: arm_right_7_link
     operation: disable  # Never in collision
   - object1: arm_right_3_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
     object2: base_footprint
     operation: disable  # Never in collision
   - object1: arm_right_3_link
@@ -793,16 +1768,43 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_right_3_link
-    object2: hand_right_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: arm_right_3_link
     object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: head_2_link
     operation: disable  # Never in collision
   - object1: arm_right_3_link
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_right_3_link
     object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: arm_right_3_link
+    object2: stereo_gazebo_r_stereo_camera_frame
     operation: disable  # Never in collision
   - object1: arm_right_3_link
     object2: stereo_link
@@ -820,6 +1822,33 @@ default_collision_operations:
     object2: arm_right_7_link
     operation: disable  # Never in collision
   - object1: arm_right_4_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
     object2: base_footprint
     operation: disable  # Never in collision
   - object1: arm_right_4_link
@@ -844,7 +1873,28 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_right_4_link
-    object2: hand_right_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: arm_right_4_link
     object2: head_1_link
@@ -853,10 +1903,43 @@ default_collision_operations:
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_right_4_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: arm_right_4_link
     object2: wheel_left_link
     operation: disable  # Never in collision
   - object1: arm_right_4_link
     object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: base_bumper_07_link
     operation: disable  # Never in collision
   - object1: arm_right_5_link
     object2: base_footprint
@@ -877,6 +1960,24 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_right_5_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_5_link
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_right_5_link
@@ -884,6 +1985,30 @@ default_collision_operations:
     operation: disable  # Never in collision
   - object1: arm_right_5_link
     object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: arm_right_tool_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: base_bumper_07_link
     operation: disable  # Never in collision
   - object1: arm_right_6_link
     object2: base_footprint
@@ -904,54 +2029,1008 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: arm_right_6_link
-    object2: hand_right_link
+    object2: hand_right_index_1_link
     operation: disable  # Never in collision
   - object1: arm_right_6_link
-    object2: head_1_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: arm_right_6_link
     object2: imu_link
     operation: disable  # Never in collision
   - object1: arm_right_6_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: arm_right_6_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: arm_right_7_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_01_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: arm_right_tool_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_bumper_02_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
     object2: torso_1_link
     operation: disable  # Never in collision
-  - object1: arm_right_6_link
+  - object1: base_bumper_01_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_01_link
     object2: wheel_left_link
     operation: disable  # Never in collision
-  - object1: arm_right_6_link
+  - object1: base_bumper_01_link
     object2: wheel_right_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: base_bumper_03_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
     object2: base_footprint
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
     object2: base_laser_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
     object2: caster_left_1_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
     object2: caster_left_2_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
     object2: caster_right_1_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
     object2: caster_right_2_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
     object2: head_1_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
     object2: imu_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
     object2: torso_1_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_02_link
     object2: wheel_left_link
     operation: disable  # Never in collision
-  - object1: arm_right_7_link
+  - object1: base_bumper_02_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_bumper_04_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: torso_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_03_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_bumper_05_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: torso_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_04_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: base_bumper_06_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: torso_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_05_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: base_bumper_07_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: torso_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_06_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: base_cargo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: torso_1_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: base_bumper_07_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: base_footprint
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: base_laser_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: base_torso_laser_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: caster_left_1_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: caster_left_2_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: caster_right_1_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: caster_right_2_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: head_1_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: head_2_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: stereo_gazebo_l_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: stereo_gazebo_r_stereo_camera_frame
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: torso_1_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: torso_2_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: base_cargo_link
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: base_footprint
@@ -973,10 +3052,52 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: base_footprint
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: base_footprint
-    object2: hand_right_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_footprint
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: base_footprint
     object2: head_1_link
@@ -1024,10 +3145,52 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: base_laser_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: base_laser_link
-    object2: hand_right_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: base_laser_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: base_laser_link
     object2: head_1_link
@@ -1132,10 +3295,52 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: caster_left_1_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: caster_left_1_link
-    object2: hand_right_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_left_1_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: caster_left_1_link
     object2: head_1_link
@@ -1174,10 +3379,52 @@ default_collision_operations:
     object2: caster_right_2_link
     operation: disable  # Never in collision
   - object1: caster_left_2_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: caster_left_2_link
-    object2: hand_right_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_left_2_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: caster_left_2_link
     object2: head_1_link
@@ -1210,10 +3457,52 @@ default_collision_operations:
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: caster_right_1_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: caster_right_1_link
-    object2: hand_right_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_right_1_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: caster_right_1_link
     object2: head_1_link
@@ -1246,10 +3535,52 @@ default_collision_operations:
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: caster_right_2_link
-    object2: hand_left_link
+    object2: hand_left_index_1_link
     operation: disable  # Never in collision
   - object1: caster_right_2_link
-    object2: hand_right_link
+    object2: hand_left_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_index_1_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_index_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: caster_right_2_link
+    object2: hand_right_thumb_link
     operation: disable  # Never in collision
   - object1: caster_right_2_link
     object2: head_1_link
@@ -1281,22 +3612,253 @@ default_collision_operations:
   - object1: caster_right_2_link
     object2: wheel_right_link
     operation: disable  # Never in collision
-  - object1: hand_left_link
+  - object1: hand_left_index_1_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_1_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_1_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_1_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_1_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_1_link
     object2: imu_link
     operation: disable  # Never in collision
-  - object1: hand_left_link
+  - object1: hand_left_index_1_link
     object2: wheel_left_link
     operation: disable  # Never in collision
-  - object1: hand_left_link
+  - object1: hand_left_index_1_link
     object2: wheel_right_link
     operation: disable  # Never in collision
-  - object1: hand_right_link
+  - object1: hand_left_index_2_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_2_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_2_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_2_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_2_link
     object2: imu_link
     operation: disable  # Never in collision
-  - object1: hand_right_link
+  - object1: hand_left_index_2_link
     object2: wheel_left_link
     operation: disable  # Never in collision
-  - object1: hand_right_link
+  - object1: hand_left_index_2_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_3_link
+    object2: hand_left_middle_1_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_3_link
+    object2: hand_left_middle_2_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_3_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_3_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_3_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_left_index_3_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_1_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_1_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_1_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_1_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_1_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_2_link
+    object2: hand_left_palm_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_2_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_2_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_2_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_2_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_3_link
+    object2: hand_left_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_3_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_3_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_left_middle_3_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_left_palm_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_left_palm_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_left_palm_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_left_thumb_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_left_thumb_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_left_thumb_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: hand_right_index_3_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_1_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_2_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: hand_right_middle_1_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: hand_right_middle_2_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: stereo_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_index_3_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_1_link
+    object2: hand_right_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_1_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_1_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_1_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_1_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_2_link
+    object2: hand_right_palm_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_2_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_2_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_2_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_2_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_3_link
+    object2: hand_right_thumb_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_3_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_3_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_middle_3_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_palm_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_palm_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_palm_link
+    object2: wheel_right_link
+    operation: disable  # Never in collision
+  - object1: hand_right_thumb_link
+    object2: imu_link
+    operation: disable  # Never in collision
+  - object1: hand_right_thumb_link
+    object2: wheel_left_link
+    operation: disable  # Never in collision
+  - object1: hand_right_thumb_link
     object2: wheel_right_link
     operation: disable  # Never in collision
   - object1: head_1_link
