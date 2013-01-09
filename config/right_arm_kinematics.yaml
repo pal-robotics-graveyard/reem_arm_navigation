@@ -4,6 +4,9 @@ group:             right_arm
 kinematics_solver: reem_kinematics_constraint_aware/ReemKinematicsPlugin
 #kinematics_solver: arm_kinematics_constraint_aware/KDLArmKinematicsPlugin
 
+# FK Solver: false = use ROS TF, true = use plugin FK
+use_plugin_fk: false
+
 right_arm:
   root_name:             torso_2_link
   tip_name:              arm_right_7_link
