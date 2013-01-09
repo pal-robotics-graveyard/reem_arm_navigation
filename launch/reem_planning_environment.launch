@@ -1,3 +1,4 @@
 <launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find reem_description)/robots/reem.urdf.xacro'" />
   <rosparam command="load" ns="robot_description_planning" file="$(find reem_arm_navigation)/config/reem_planning_description.yaml" />
 </launch>
