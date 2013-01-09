@@ -1,5 +1,8 @@
 group:             left_arm
+
+# IK Solver
 kinematics_solver: reem_kinematics_constraint_aware/ReemKinematicsPlugin
+#kinematics_solver: arm_kinematics_constraint_aware/KDLArmKinematicsPlugin
 
 left_arm:
   root_name:             torso_2_link
