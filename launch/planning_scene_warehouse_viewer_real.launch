@@ -16,7 +16,6 @@
   <include file="$(find reem_arm_navigation)/launch/constraint_aware_kinematics.launch" />
   <include file="$(find reem_arm_navigation)/launch/ompl_planning.launch" />
   <include file="$(find reem_arm_navigation)/launch/trajectory_filter_server.launch" />
-  <node pkg="robot_state_publisher" type="state_publisher" name="rob_st_pub" />
   <node name="planning_scene_warehouse_viewer" pkg="move_arm_warehouse" type="planning_scene_warehouse_viewer"/>
 
   <node name="interpolated_ik_node_right" pkg="interpolated_ik_motion_planner"
