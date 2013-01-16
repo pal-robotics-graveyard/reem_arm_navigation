@@ -1,4 +1,5 @@
 <launch>
+    <include file="$(find reem_description)/robots/upload_reem.launch" />
     <include file="$(find reem_arm_navigation)/launch/reem_planning_environment.launch" />
     <include file="$(find planning_environment)/launch/planning_environment_visualization_prerequisites.launch" />
     <include file="$(find reem_arm_navigation)/launch/constraint_aware_kinematics.launch" />
