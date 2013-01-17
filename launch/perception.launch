@@ -22,7 +22,8 @@
   <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
     <param name="frame_id" type="string" value="/base_link" /> <!-- TODO: Set to /map -->
     <param name="resolution" type="double" value="0.025" />
-    <param name="sensor_model/max_range" type="double" value="2.5" />
+    <param name="sensor_model/max_range" type="double" value="0.35" />
+    <param name="sensor_model/max_range" type="double" value="1.5" />
 
     <remap from="cloud_in" to="/head_mount_xtion/depth/points_filtered" />
     <remap from="collision_map_out" to="collision_map_occ" />
