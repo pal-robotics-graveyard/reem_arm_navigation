@@ -3,9 +3,9 @@
   <include file="$(find reem_arm_navigation)/launch/reem_planning_environment.launch" />
 
   <!-- self filter -->
-  <node pkg="robot_self_filter" type="self_filter" respawn="true" name="xtion_self_filter" output="screen">
-    <remap from="cloud_in" to="/head_mount_xtion/depth/points" />
-    <remap from="cloud_out" to="/head_mount_xtion/depth/points_filtered" />
+  <node pkg="robot_self_filter_color" type="self_filter_color" respawn="true" name="xtion_self_filter_color">
+    <remap from="cloud_in" to="/head_mount_xtion/depth_registered/points" />
+    <remap from="cloud_out" to="/obstacles_filtered" />
     <param name="subsample_value" type="double" value=".02"/>
     <rosparam command="load" file="$(find reem_arm_navigation)/config/self_filter.yaml" />
   </node>
@@ -25,7 +25,7 @@
     <param name="sensor_model/max_range" type="double" value="0.35" />
     <param name="sensor_model/max_range" type="double" value="1.5" />
 
-    <remap from="cloud_in" to="/head_mount_xtion/depth/points_filtered" />
+    <remap from="cloud_in" to="/obstacles_filtered" />
     <remap from="collision_map_out" to="collision_map_occ" />
   </node>
 </launch>
