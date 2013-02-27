@@ -4064,6 +4064,14 @@ default_collision_operations:
     object2: wheel_right_link
     operation: disable  # Never in collision
 
+    # Important, checked during grasping
+  - object1: hand_left_palm_link
+    object2: hand_left_middle_3_link
+    operation: disable  # Never in collision
+  - object1: hand_left_palm_link
+    object2: hand_left_index_3_link
+    operation: disable  # Never in collision
+
     # For thumb extension, may need to add more
   - object1: hand_left_palm_link 
     object2: hand_left_thumb_extension_link
