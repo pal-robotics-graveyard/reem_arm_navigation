@@ -1,5 +1,11 @@
 group:             right_arm_torso
+
+# IK Solver
 kinematics_solver: reem_kinematics_constraint_aware/ReemKinematicsPlugin
+#kinematics_solver: arm_kinematics_constraint_aware/KDLArmKinematicsPlugin
+
+# FK Solver: false = use ROS TF, true = use plugin FK
+use_plugin_fk: false
 
 right_arm_torso:
   root_name:             base_link
