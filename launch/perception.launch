@@ -4,7 +4,7 @@
 
   <!-- self filter -->
   <node pkg="robot_self_filter_color" type="self_filter_color" respawn="true" name="xtion_self_filter_color">
-    <remap from="cloud_in" to="/head_mount_xtion/depth_registered/points" />
+    <remap from="cloud_in" to="/head_mount_xtion/rgb/points" />
     <remap from="cloud_out" to="/obstacles_filtered" />
     <param name="subsample_value" type="double" value=".02"/>
     <rosparam command="load" file="$(find reem_arm_navigation)/config/self_filter.yaml" />
